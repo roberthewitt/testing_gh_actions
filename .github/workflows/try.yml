@@ -15,3 +15,11 @@ jobs:
       - name: Multi Condition
         if: ${{ 'a' == 'a' && 'b' == 'b' }}
         run: echo "works"
+
+      - name: MultiLine Condition
+        if: | 
+          ${{ 
+              'true' == 'true' 
+              && 'false' == 'false'
+          }}
+        run: echo "works"
