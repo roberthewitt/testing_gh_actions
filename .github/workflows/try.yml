@@ -1,0 +1,19 @@
+name: Try Things
+
+on: [workflow_dispatch]
+
+jobs:
+  a:
+    name: try contitional logic
+    runs-on: linux
+    steps: 
+      - name: Single Condition
+        if: "a" === "a"
+        run: echo "works"
+
+    steps: 
+      - name: Multi Condition
+        if: "a" === "a" && "b" === "b"
+        run: echo "works"
+
+        
