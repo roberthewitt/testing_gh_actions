@@ -12,7 +12,6 @@ jobs:
         if: ${{ 'a' == 'a' }}
         run: echo "works"
 
-    steps: 
       - name: Multi Condition
         if: ${{ 'a' == 'a' && 'b' == 'b' }}
         run: echo "works"
