@@ -6,12 +6,13 @@ jobs:
   a:
     name: try contitional logic
     runs-on: ubuntu-latest
+    
     steps: 
       - name: Single Condition
-        if: 'a' == 'a'
+        if: ${{ 'a' == 'a' }}
         run: echo "works"
 
     steps: 
       - name: Multi Condition
-        if: 'a' == 'a' && 'b' == 'b'
+        if: ${{ 'a' == 'a' && 'b' == 'b' }}
         run: echo "works"
