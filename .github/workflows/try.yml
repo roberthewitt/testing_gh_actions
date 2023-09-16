@@ -23,3 +23,13 @@ jobs:
               && 'false' == 'false'
           }}
         run: echo "works"
+
+      - name: Should skip MultiLine Condition
+        if: | 
+          ${{ 
+              'true' == 'false' 
+              && 'false' == 'true'
+          }}
+        run: echo "works"
+
+        
