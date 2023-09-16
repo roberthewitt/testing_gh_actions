@@ -26,6 +26,13 @@ jobs:
 
       - name: Should skip MultiLine Condition
         if: ${{ 'true' == 'false' && 'false' == 'true' }}
-        run: echo "works"
+        run: echo "shouldn't run this"
+
+      - name: Should skip MultiLine Condition 2
+        if: ${{ |
+          'true' == 'false' &&
+          'false' == 'true' 
+          }}
+        run: echo "shouldn't run this"
 
         
